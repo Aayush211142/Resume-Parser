@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+        }
+        .grandparent{
+            width:100vw;
+            height:100vh;
+            background-color:lightblue;
+    }
+        .parent{
+            display:flex;
+            justify-content:center;
+            flex-direction:column;
+            align-items:center;
+            transition:ease-in-out 0.8s;
+        }
+        .parent:hover{
+            transform:scale(0.9);
+        }
+        .child{
+             display:flex;
+            justify-content:center;
+            flex-direction:column;
+            align-items:center;
+            
+            background-color: green;
+            border-radius:30px;
+            border-style:dashed;
+            border-color:white;
+            width:550px;
+            transition:ease-in-out 0.8s;
+
+
+        }
+        .child:hover{
+            transform:scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div Class="grandparent">
+    <div Class="parent">
+        <div class="child">
+            <h1>Wellcome to my first webpage</h1>
+            <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHdlYiUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww">
+        
+            <h4>Hey guys!this is my first webpage,I know this is the worst webpage you can see but as time will pass I will make it better</h4>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
