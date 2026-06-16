@@ -303,6 +303,7 @@
 
         const hiddenFileSelect = document.getElementById('hiddenFileSelect');
         const uploadStatusText = document.getElementById('uploadStatusText');
+        const API_BASE = 'https://your-service.onrender.com'; // <-- REPLACE THIS
 
         hiddenFileSelect.addEventListener('change', async function() {
             if (!this.files || this.files.length === 0) return;
@@ -315,7 +316,7 @@
             uploadStatusText.style.color = "#00ffcc";
 
             try {
-                const networkResponse = await fetch('http://127.0.0.1:8000/parse-resume', {
+                const networkResponse = await fetch(`${API_BASE}/parse-resume`, {
                     method: 'POST',
                     body: packetData
                 });
