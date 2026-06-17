@@ -303,7 +303,9 @@
 
         const hiddenFileSelect = document.getElementById('hiddenFileSelect');
         const uploadStatusText = document.getElementById('uploadStatusText');
-        const API_BASE = 'https://your-service.onrender.com'; // <-- REPLACE THIS
+        // Set your deployed backend URL here (HTTPS). Replace the placeholder below with
+        // the URL of your deployed FastAPI service, e.g. https://resume-parser.onrender.com
+        const API_BASE = 'https://revocable-negligent-prankish.ngrok-free.dev'; // <-- REPLACE THIS
 
         hiddenFileSelect.addEventListener('change', async function() {
             if (!this.files || this.files.length === 0) return;
@@ -316,7 +318,8 @@
             uploadStatusText.style.color = "#00ffcc";
 
             try {
-                const networkResponse = await fetch(`${API_BASE}/parse-resume`, {
+                const endpointUrl = new URL('/parse-resume', API_BASE);
+                const networkResponse = await fetch(endpointUrl, {
                     method: 'POST',
                     body: packetData
                 });
